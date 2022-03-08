@@ -4,19 +4,28 @@ namespace lab_2
 {
     class Program
     {
-        public static double pierwiastek(double a, double n, double w, int count = 0)
+        public static double Sqrt(double s, double n, double x = 0, int count = 0)
         {
-           if(count==a)
+           if (count==0)
             {
-                return w;
+                double temp = s / 2;
+                return Sqrt(s, n, temp, count + 1);
             }
-            w = (1 / 2) * (pierwiastek(a, n,w) + a / pierwiastek(a, n));
-            return w;
+            else if (count==n)
+            {
+                return x;
+            }
+            else
+            {
+                double temp = 0.5 * (x + s / x);
+                return Sqrt(s, n, temp, count + 1);
+            }
+            
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine(pierwiastek(5, 2));
+            Console.WriteLine(Sqrt(10, 10));
         }
     }
 }

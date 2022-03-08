@@ -17,7 +17,7 @@ namespace lab_2
                 
             
         }
-        public static void Count(int[] x, int index = 0)
+        public static void ModArr(int[] x, int index = 0)
         {
             if (index == x.Length)
             {
@@ -26,18 +26,18 @@ namespace lab_2
             if(Mod(x[index], 3)==0 && Mod(x[index], 5)==0)
             {
                 Console.WriteLine("FizzBuzz");
-                 Count(x, index + 1); 
+                 ModArr(x, index + 1); 
             } else if (Mod(x[index], 3) == 0) 
             {
                 Console.WriteLine("Fizz");
-                 Count(x, index + 1); 
+                 ModArr(x, index + 1); 
             } else if (Mod(x[index], 5)==0) {
                 Console.WriteLine("Buzz");
-                 Count(x, index + 1); 
+                 ModArr(x, index + 1); 
             } else
             {
                 Console.WriteLine(x[index] + " ");
-                Count(x, index + 1);
+                ModArr(x, index + 1);
             }
             
         }
@@ -48,7 +48,7 @@ namespace lab_2
             {
                 array[i] = i;
             }
-            Count(array);
+            ModArr(array);
         }
     }
 }
